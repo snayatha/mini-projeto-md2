@@ -18,5 +18,31 @@ form.addEventListener ("submit", (event) => {
     return;
  }
 
+ if (ageinput.value === ""){
+    alert("por favor, preencha sua idade");
+    return;
+ }
 
+ if (jobselect.value === ""){
+    alert("por favor, selecione uma opção");
+    return;
+ }
+
+ if (messagetextarea.value === ""){
+    alert("por favor, escreva uma mensagem");
+    return;
+ }
+
+
+form.submit();
 })
+
+function isEmailValid(email) {
+    const emailregex = new RegExp (
+        /^[a-zA-Z0-9._-]+@{a-zA-Z0-9._-}+\.[a-zA-Z]{2,}$/);
+    
+        if(emailregex.test(email)) {
+            return true;
+        }
+            return false;
+    }
